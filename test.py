@@ -1,4 +1,4 @@
-driver selenium import webdriver
+selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 
