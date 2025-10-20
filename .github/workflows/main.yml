@@ -24,10 +24,10 @@ jobs:
       - name: Download ChromeDriver
         run: |
           CHROMEDRIVER_VERSION=118.0.5993.90
-          wget -q "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip"
-          unzip chromedriver_linux64.zip
-          chmod +x chromedriver
-          sudo mv chromedriver /usr/local/bin/chromedriver
+          #wget -q "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip"
+          #unzip chromedriver_linux64.zip
+          #chmod +x chromedriver
+          #sudo mv chromedriver /usr/local/bin/chromedriver
           
         
 
