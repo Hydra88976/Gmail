@@ -1,4 +1,4 @@
-name: Selenium Tests
+--versionmedrivermedrivermium-chromedrivermium-chromedriveralllllenium Tests
 
 on:
   workflow_dispatch:
@@ -31,7 +31,7 @@ jobs:
       - name: Install Chromium and ChromeDriver
         run: |
           sudo apt-get update
-          sudo apt-get install -y chromium-chromedriver
+          sudo apt-get install -y chromium-browser chromium-chromedriver
           chromedriver --version
 
 
