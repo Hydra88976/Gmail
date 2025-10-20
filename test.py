@@ -2,14 +2,20 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 
-options = Options()
-options.add_argument("--headless")
-options.add_argument("--no-sandbox")
-options.add_argument("--disable-dev-shm-usage")
+# Set Chrome options
+chrome_options = Options()
+chrome_options.add_argument("--headless")  # Run in headless mode (no UI)
+chrome_options.add_argument("--no-sandbox")
+chrome_options.add_argument("--disable-dev-shm-usage")
 
-service = Service("/usr/bin/chromedriver")  # Chromium driver pat#h
-#driver = webdriver.Chrome(service=service, options=options)
-driver = webdriver.Chrome("/usr/lib/chromium-browser/chromedriver")
-driver.get("https://example.com")
+# Set path to chromedriver (installed via apt or preinstalled in GitHub Actions)
+service = Service("/usr/lib/chromium-browser/chromedriver")
+
+# Initialize driver correctly
+driver = webdriver.Chrome(service=service, options=chrome_options)
+
+driver.get("https://www.google.com")
 print(driver.title)
+
 driver.quit()
+
